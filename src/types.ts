@@ -4,10 +4,10 @@ import type {
   inferRouterContext,
   inferRouterError,
   ProcedureType,
-  ResponseMeta,
   TRPCError,
 } from '@trpc/server';
-import type { TRPCResponse } from '@trpc/server/dist/declarations/src/rpc';
+import type { ResponseMeta } from '@trpc/server/http';
+import type { TRPCResponse } from '@trpc/server/rpc';
 
 export type CreateContextFn<TRouter extends AnyRouter> = (event: RequestEvent) => inferRouterContext<TRouter> | Promise<inferRouterContext<TRouter>>;
 
